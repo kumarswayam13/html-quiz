@@ -1,0 +1,2593 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🚀 Cosmic HTML Mastery Quest! 🌟</title>
+  </head>
+  <body
+    style="
+      font-family:
+        &quot;Comic Sans MS&quot;, &quot;Chalkboard SE&quot;,
+        &quot;Ubuntu&quot;, sans-serif;
+      background: linear-gradient(135deg, #1e1b4b 0%, #311042 100%);
+      color: #f3f4f6;
+      margin: 0;
+      padding: 20px;
+      min-height: 100vh;
+      line-height: 1.6;
+    "
+  >
+    <div
+      style="
+        max-width: 800px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        padding: 35px;
+        border-radius: 30px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        border: 4px solid #ff007f;
+      "
+    >
+      <div style="text-align: center; margin-bottom: 30px; position: relative">
+        <h1
+          style="
+            color: #00f2fe;
+            text-shadow:
+              0 0 15px #00f2fe,
+              0 0 30px #7000ff;
+            font-size: 2.8em;
+            margin: 0 0 10px 0;
+            letter-spacing: 1px;
+          "
+        >
+          🚀 HTML Space Quest! ✨
+        </h1>
+        <p
+          style="color: #a7f3d0; font-size: 1.2em; margin: 0; font-weight: bold"
+        >
+          Unlock the secrets of the web code matrix! 🌌
+        </p>
+      </div>
+
+      <div
+        id="registrationBlock"
+        style="
+          background: radial-gradient(circle, #2563eb 0%, #1d4ed8 100%);
+          border: 4px dashed #00f2fe;
+          padding: 30px;
+          border-radius: 24px;
+          margin-bottom: 30px;
+          text-align: center;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        "
+      >
+        <h2
+          style="
+            margin-top: 0;
+            color: #fff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+          "
+        >
+          👨‍🚀 Identify Yourself, Explorer!
+        </h2>
+        <p style="color: #e0f2fe; margin-bottom: 20px">
+          Enter your code-name to boot up your spaceship engines:
+        </p>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+          "
+        >
+          <input
+            type="text"
+            id="userName"
+            placeholder="Type Your Super Name Here..."
+            style="
+              padding: 15px 25px;
+              width: 280px;
+              border: 4px solid #fff;
+              border-radius: 50px;
+              font-size: 1.2em;
+              outline: none;
+              font-weight: bold;
+              text-align: center;
+              box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+              color: #1e1b4b;
+            "
+          />
+          <button
+            type="button"
+            onclick="startQuiz()"
+            style="
+              background: linear-gradient(to right, #ff007f, #ff7b00);
+              color: white;
+              border: 4px solid #fff;
+              padding: 15px 35px;
+              border-radius: 50px;
+              cursor: pointer;
+              font-weight: bold;
+              font-size: 1.2em;
+              box-shadow: 0 5px 15px rgba(255, 0, 127, 0.4);
+              transition: transform 0.2s;
+            "
+          >
+            Launch Mission! 🌠
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="liveScoreHUD"
+        style="
+          display: none;
+          background: #0f172a;
+          border: 4px solid #38bdf8;
+          padding: 20px;
+          border-radius: 20px;
+          margin-bottom: 35px;
+          box-shadow: inset 0 0 20px rgba(56, 189, 248, 0.3);
+        "
+      >
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            flex-wrap: wrap;
+            gap: 15px;
+          "
+        >
+          <div style="color: #e0f2fe">
+            🚀 Captain:
+            <span
+              id="displayName"
+              style="
+                color: #38bdf8;
+                text-shadow: 0 0 8px rgba(56, 189, 248, 0.5);
+              "
+            ></span>
+          </div>
+          <div style="color: #fef08a">
+            ✨ Stars Explored:
+            <span id="hudAnswered" style="color: #fff">0</span> / 15
+          </div>
+          <div style="color: #4ade80">
+            🔋 Live Energy: <span id="hudScore" style="color: #fff">0</span>
+          </div>
+        </div>
+        <div
+          style="
+            width: 100%;
+            background-color: #334155;
+            height: 16px;
+            border-radius: 50px;
+            margin-top: 15px;
+            overflow: hidden;
+            border: 2px solid #fff;
+            position: relative;
+          "
+        >
+          <div
+            id="hudProgressBar"
+            style="
+              width: 0%;
+              background: linear-gradient(90deg, #3b82f6, #00f2fe);
+              height: 100%;
+              transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            "
+          ></div>
+        </div>
+      </div>
+
+      <div id="quizContainer" style="display: none">
+        <div
+          style="
+            background: rgba(15, 23, 42, 0.6);
+            border: 3px solid #6366f1;
+            padding: 25px;
+            border-radius: 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          "
+          id="block1"
+        >
+          <h3
+            style="
+              margin-top: 0;
+              color: #fff;
+              font-size: 1.3em;
+              display: flex;
+              align-items: flex-start;
+              gap: 10px;
+            "
+          >
+            <span>🔮</span
+            ><span
+              >1. What is the mandatory file extension required to save and view
+              an HTML document in a web browser?</span
+            >
+          </h3>
+          <form id="q1Form">
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q1"
+                value="A"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 a) .html</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q1"
+                value="B"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 b) .txt</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q1"
+                value="C"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 c) .doc</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q1"
+                value="D"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 d) .web</label
+            >
+            <button
+              type="button"
+              onclick="
+                submitSingleAnswer(
+                  1,
+                  'A',
+                  'An HTML document must be saved with a .html extension so the text editor doesn\'t save it as plain text, allowing you to view it natively using a web browser.',
+                )
+              "
+              id="btn1"
+              style="
+                margin-top: 15px;
+                background: #6366f1;
+                color: white;
+                border: none;
+                padding: 10px 24px;
+                border-radius: 50px;
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 1em;
+                box-shadow: 0 4px 10px rgba(99, 102, 241, 0.4);
+              "
+            >
+              Lock In Choice! 🔐
+            </button>
+          </form>
+          <div
+            id="explain1"
+            style="
+              display: none;
+              margin-top: 15px;
+              padding: 15px;
+              border-radius: 16px;
+            "
+          ></div>
+        </div>
+
+        <div
+          style="
+            background: rgba(15, 23, 42, 0.6);
+            border: 3px solid #6366f1;
+            padding: 25px;
+            border-radius: 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          "
+          id="block2"
+        >
+          <h3
+            style="
+              margin-top: 0;
+              color: #fff;
+              font-size: 1.3em;
+              display: flex;
+              align-items: flex-start;
+              gap: 10px;
+            "
+          >
+            <span>🔮</span
+            ><span
+              >2. Which tag is used to define a container element that
+              represents a standard paragraph block of text?</span
+            >
+          </h3>
+          <form id="q2Form">
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q2"
+                value="A"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 a) &lt;BR&gt;</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q2"
+                value="B"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 b) &lt;BODY&gt;</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q2"
+                value="C"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 c) &lt;P&gt;</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q2"
+                value="D"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 d) &lt;HR&gt;</label
+            >
+            <button
+              type="button"
+              onclick="
+                submitSingleAnswer(
+                  2,
+                  'C',
+                  'The &lt;P&gt; element defines a paragraph. It always starts on a new line, and browsers automatically add some white space before and after it.',
+                )
+              "
+              id="btn2"
+              style="
+                margin-top: 15px;
+                background: #6366f1;
+                color: white;
+                border: none;
+                padding: 10px 24px;
+                border-radius: 50px;
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 1em;
+                box-shadow: 0 4px 10px rgba(99, 102, 241, 0.4);
+              "
+            >
+              Lock In Choice! 🔐
+            </button>
+          </form>
+          <div
+            id="explain2"
+            style="
+              display: none;
+              margin-top: 15px;
+              padding: 15px;
+              border-radius: 16px;
+            "
+          ></div>
+        </div>
+
+        <div
+          style="
+            background: rgba(15, 23, 42, 0.6);
+            border: 3px solid #6366f1;
+            padding: 25px;
+            border-radius: 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          "
+          id="block3"
+        >
+          <h3
+            style="
+              margin-top: 0;
+              color: #fff;
+              font-size: 1.3em;
+              display: flex;
+              align-items: flex-start;
+              gap: 10px;
+            "
+          >
+            <span>🔮</span
+            ><span
+              >3. Which attribute of the &lt;body&gt; tag is used to change the
+              background color of the entire web page?</span
+            >
+          </h3>
+          <form id="q3Form">
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q3"
+                value="A"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 a) BACKGROUND</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q3"
+                value="B"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 b) BGCOLOR</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q3"
+                value="C"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 c) TEXT</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q3"
+                value="D"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 d) COLOR</label
+            >
+            <button
+              type="button"
+              onclick="
+                submitSingleAnswer(
+                  3,
+                  'B',
+                  'The BGCOLOR attribute changes the background color of your webpage. The BACKGROUND attribute is instead used to set a background image file.',
+                )
+              "
+              id="btn3"
+              style="
+                margin-top: 15px;
+                background: #6366f1;
+                color: white;
+                border: none;
+                padding: 10px 24px;
+                border-radius: 50px;
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 1em;
+                box-shadow: 0 4px 10px rgba(99, 102, 241, 0.4);
+              "
+            >
+              Lock In Choice! 🔐
+            </button>
+          </form>
+          <div
+            id="explain3"
+            style="
+              display: none;
+              margin-top: 15px;
+              padding: 15px;
+              border-radius: 16px;
+            "
+          ></div>
+        </div>
+
+        <div
+          style="
+            background: rgba(15, 23, 42, 0.6);
+            border: 3px solid #6366f1;
+            padding: 25px;
+            border-radius: 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          "
+          id="block4"
+        >
+          <h3
+            style="
+              margin-top: 0;
+              color: #fff;
+              font-size: 1.3em;
+              display: flex;
+              align-items: flex-start;
+              gap: 10px;
+            "
+          >
+            <span>🔮</span
+            ><span
+              >4. How are the six distinct heading levels in HTML ordered by
+              importance and presentation size?</span
+            >
+          </h3>
+          <form id="q4Form">
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q4"
+                value="A"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 a) &lt;H1&gt; is the highest level and &lt;H6&gt; is the
+              least</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q4"
+                value="B"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 b) &lt;H6&gt; is the highest level and &lt;H1&gt; is the
+              least</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q4"
+                value="C"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 c) &lt;H0&gt; is the highest level and &lt;H5&gt; is the
+              least</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q4"
+                value="D"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 d) All heading elements display at an identical font
+              size</label
+            >
+            <button
+              type="button"
+              onclick="
+                submitSingleAnswer(
+                  4,
+                  'A',
+                  'HTML defines headings from &lt;H1&gt; to &lt;H6&gt;, with &lt;H1&gt; being the highest (or most important/largest) level and &lt;H6&gt; the least.',
+                )
+              "
+              id="btn4"
+              style="
+                margin-top: 15px;
+                background: #6366f1;
+                color: white;
+                border: none;
+                padding: 10px 24px;
+                border-radius: 50px;
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 1em;
+                box-shadow: 0 4px 10px rgba(99, 102, 241, 0.4);
+              "
+            >
+              Lock In Choice! 🔐
+            </button>
+          </form>
+          <div
+            id="explain4"
+            style="
+              display: none;
+              margin-top: 15px;
+              padding: 15px;
+              border-radius: 16px;
+            "
+          ></div>
+        </div>
+
+        <div
+          style="
+            background: rgba(15, 23, 42, 0.6);
+            border: 3px solid #6366f1;
+            padding: 25px;
+            border-radius: 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          "
+          id="block5"
+        >
+          <h3
+            style="
+              margin-top: 0;
+              color: #fff;
+              font-size: 1.3em;
+              display: flex;
+              align-items: flex-start;
+              gap: 10px;
+            "
+          >
+            <span>🔮</span
+            ><span
+              >5. Which of the following is an empty element used to force a
+              single line break in a webpage?</span
+            >
+          </h3>
+          <form id="q5Form">
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q5"
+                value="A"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 a) &lt;HR&gt;</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q5"
+                value="B"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 b) &lt;P&gt;</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q5"
+                value="C"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 c) &lt;DIV&gt;</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q5"
+                value="D"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 d) &lt;BR&gt;</label
+            >
+            <button
+              type="button"
+              onclick="
+                submitSingleAnswer(
+                  5,
+                  'D',
+                  '&lt;BR&gt; is an empty element used to insert a line break. You type it wherever you need to move following content to the next line.',
+                )
+              "
+              id="btn5"
+              style="
+                margin-top: 15px;
+                background: #6366f1;
+                color: white;
+                border: none;
+                padding: 10px 24px;
+                border-radius: 50px;
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 1em;
+                box-shadow: 0 4px 10px rgba(99, 102, 241, 0.4);
+              "
+            >
+              Lock In Choice! 🔐
+            </button>
+          </form>
+          <div
+            id="explain5"
+            style="
+              display: none;
+              margin-top: 15px;
+              padding: 15px;
+              border-radius: 16px;
+            "
+          ></div>
+        </div>
+
+        <div
+          style="
+            background: rgba(15, 23, 42, 0.6);
+            border: 3px solid #6366f1;
+            padding: 25px;
+            border-radius: 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          "
+          id="block6"
+        >
+          <h3
+            style="
+              margin-top: 0;
+              color: #fff;
+              font-size: 1.3em;
+              display: flex;
+              align-items: flex-start;
+              gap: 10px;
+            "
+          >
+            <span>🔮</span
+            ><span
+              >6. What is the default marking style used for list items inside
+              an ordered list (&lt;OL&gt;)?</span
+            >
+          </h3>
+          <form id="q6Form">
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q6"
+                value="A"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 a) Roman numerals (i, ii, iii...)</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q6"
+                value="B"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 b) Arabic numerals (1, 2, 3...)</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q6"
+                value="C"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 c) Alphabetical letters (a, b, c...)</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q6"
+                value="D"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 d) Solid bullet discs</label
+            >
+            <button
+              type="button"
+              onclick="
+                submitSingleAnswer(
+                  6,
+                  'B',
+                  'Each list item in an ordered list starts automatically with an Arabic numeral by default, unless modified by the type attribute.',
+                )
+              "
+              id="btn6"
+              style="
+                margin-top: 15px;
+                background: #6366f1;
+                color: white;
+                border: none;
+                padding: 10px 24px;
+                border-radius: 50px;
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 1em;
+                box-shadow: 0 4px 10px rgba(99, 102, 241, 0.4);
+              "
+            >
+              Lock In Choice! 🔐
+            </button>
+          </form>
+          <div
+            id="explain6"
+            style="
+              display: none;
+              margin-top: 15px;
+              padding: 15px;
+              border-radius: 16px;
+            "
+          ></div>
+        </div>
+
+        <div
+          style="
+            background: rgba(15, 23, 42, 0.6);
+            border: 3px solid #6366f1;
+            padding: 25px;
+            border-radius: 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          "
+          id="block7"
+        >
+          <h3
+            style="
+              margin-top: 0;
+              color: #fff;
+              font-size: 1.3em;
+              display: flex;
+              align-items: flex-start;
+              gap: 10px;
+            "
+          >
+            <span>🔮</span
+            ><span
+              >7. In an HTML description list, which specific tag is responsible
+              for defining the definition or description text?</span
+            >
+          </h3>
+          <form id="q7Form">
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q7"
+                value="A"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 a) &lt;DL&gt;</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q7"
+                value="B"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 b) &lt;DT&gt;</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q7"
+                value="C"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 c) &lt;DD&gt;</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q7"
+                value="D"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 d) &lt;LI&gt;</label
+            >
+            <button
+              type="button"
+              onclick="
+                submitSingleAnswer(
+                  7,
+                  'C',
+                  'The &lt;DL&gt; tag sets up the list, &lt;DT&gt; defines the data term, and &lt;DD&gt; defines the data description text content itself.',
+                )
+              "
+              id="btn7"
+              style="
+                margin-top: 15px;
+                background: #6366f1;
+                color: white;
+                border: none;
+                padding: 10px 24px;
+                border-radius: 50px;
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 1em;
+                box-shadow: 0 4px 10px rgba(99, 102, 241, 0.4);
+              "
+            >
+              Lock In Choice! 🔐
+            </button>
+          </form>
+          <div
+            id="explain7"
+            style="
+              display: none;
+              margin-top: 15px;
+              padding: 15px;
+              border-radius: 16px;
+            "
+          ></div>
+        </div>
+
+        <div
+          style="
+            background: rgba(15, 23, 42, 0.6);
+            border: 3px solid #6366f1;
+            padding: 25px;
+            border-radius: 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          "
+          id="block8"
+        >
+          <h3
+            style="
+              margin-top: 0;
+              color: #fff;
+              font-size: 1.3em;
+              display: flex;
+              align-items: flex-start;
+              gap: 10px;
+            "
+          >
+            <span>🔮</span
+            ><span
+              >8. Which pair of attributes is strictly required to locate an
+              image file path and specify an alternate text fallback?</span
+            >
+          </h3>
+          <form id="q8Form">
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q8"
+                value="A"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 a) src and alt</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q8"
+                value="B"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 b) height and width</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q8"
+                value="C"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 c) href and src</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q8"
+                value="D"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 d) align and border</label
+            >
+            <button
+              type="button"
+              onclick="
+                submitSingleAnswer(
+                  8,
+                  'A',
+                  'The &lt;img&gt; element has two required attributes: \'src\' (specifies the path to the image) and \'alt\' (specifies alternate text if it fails to load).',
+                )
+              "
+              id="btn8"
+              style="
+                margin-top: 15px;
+                background: #6366f1;
+                color: white;
+                border: none;
+                padding: 10px 24px;
+                border-radius: 50px;
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 1em;
+                box-shadow: 0 4px 10px rgba(99, 102, 241, 0.4);
+              "
+            >
+              Lock In Choice! 🔐
+            </button>
+          </form>
+          <div
+            id="explain8"
+            style="
+              display: none;
+              margin-top: 15px;
+              padding: 15px;
+              border-radius: 16px;
+            "
+          ></div>
+        </div>
+
+        <div
+          style="
+            background: rgba(15, 23, 42, 0.6);
+            border: 3px solid #6366f1;
+            padding: 25px;
+            border-radius: 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          "
+          id="block9"
+        >
+          <h3
+            style="
+              margin-top: 0;
+              color: #fff;
+              font-size: 1.3em;
+              display: flex;
+              align-items: flex-start;
+              gap: 10px;
+            "
+          >
+            <span>🔮</span
+            ><span
+              >9. What is the correct nesting sequence to implement a dynamic
+              image file as a clickable hyperlink anchor?</span
+            >
+          </h3>
+          <form id="q9Form">
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q9"
+                value="A"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 a) Put the &lt;a&gt; tag inside the &lt;img&gt; tag</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q9"
+                value="B"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 b) Put the &lt;img&gt; tag inside the &lt;a&gt; tag</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q9"
+                value="C"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 c) Incorporate the href attribute inside the &lt;img&gt;
+              tag</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q9"
+                value="D"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 d) Incorporate the src attribute inside the &lt;a&gt;
+              tag</label
+            >
+            <button
+              type="button"
+              onclick="
+                submitSingleAnswer(
+                  9,
+                  'B',
+                  'To use an image as a link, you simply put the empty &lt;img&gt; tag inside the container &lt;a&gt; tag structure.',
+                )
+              "
+              id="btn9"
+              style="
+                margin-top: 15px;
+                background: #6366f1;
+                color: white;
+                border: none;
+                padding: 10px 24px;
+                border-radius: 50px;
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 1em;
+                box-shadow: 0 4px 10px rgba(99, 102, 241, 0.4);
+              "
+            >
+              Lock In Choice! 🔐
+            </button>
+          </form>
+          <div
+            id="explain9"
+            style="
+              display: none;
+              margin-top: 15px;
+              padding: 15px;
+              border-radius: 16px;
+            "
+          ></div>
+        </div>
+
+        <div
+          style="
+            background: rgba(15, 23, 42, 0.6);
+            border: 3px solid #6366f1;
+            padding: 25px;
+            border-radius: 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          "
+          id="block10"
+        >
+          <h3
+            style="
+              margin-top: 0;
+              color: #fff;
+              font-size: 1.3em;
+              display: flex;
+              align-items: flex-start;
+              gap: 10px;
+            "
+          >
+            <span>🔮</span
+            ><span
+              >10. Which attribute is explicitly declared inside the
+              &lt;table&gt; tag to enable visible layout cell lines?</span
+            >
+          </h3>
+          <form id="q10Form">
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q10"
+                value="A"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 a) grid</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q10"
+                value="B"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 b) size</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q10"
+                value="C"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 c) width</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q10"
+                value="D"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 d) border</label
+            >
+            <button
+              type="button"
+              onclick="
+                submitSingleAnswer(
+                  10,
+                  'D',
+                  'There is no border around an HTML table by default. The border attribute is used in the &lt;table&gt; tag to add them explicitly.',
+                )
+              "
+              id="btn10"
+              style="
+                margin-top: 15px;
+                background: #6366f1;
+                color: white;
+                border: none;
+                padding: 10px 24px;
+                border-radius: 50px;
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 1em;
+                box-shadow: 0 4px 10px rgba(99, 102, 241, 0.4);
+              "
+            >
+              Lock In Choice! 🔐
+            </button>
+          </form>
+          <div
+            id="explain10"
+            style="
+              display: none;
+              margin-top: 15px;
+              padding: 15px;
+              border-radius: 16px;
+            "
+          ></div>
+        </div>
+
+        <div
+          style="
+            background: rgba(15, 23, 42, 0.6);
+            border: 3px solid #6366f1;
+            padding: 25px;
+            border-radius: 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          "
+          id="block11"
+        >
+          <h3
+            style="
+              margin-top: 0;
+              color: #fff;
+              font-size: 1.3em;
+              display: flex;
+              align-items: flex-start;
+              gap: 10px;
+            "
+          >
+            <span>🔮</span
+            ><span
+              >11. Who wrote the first version of HTML in the year 1993?</span
+            >
+          </h3>
+          <form id="q11Form">
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q11"
+                value="A"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 a) Brendan Eich</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q11"
+                value="B"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 b) Sir Tim Berners-Lee</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q11"
+                value="C"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 c) James Gosling</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q11"
+                value="D"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 d) Dennis Ritchie</label
+            >
+            <button
+              type="button"
+              onclick="
+                submitSingleAnswer(
+                  11,
+                  'B',
+                  'The very first version of HTML was written by Sir Tim Berners-Lee in 1993.',
+                )
+              "
+              id="btn11"
+              style="
+                margin-top: 15px;
+                background: #6366f1;
+                color: white;
+                border: none;
+                padding: 10px 24px;
+                border-radius: 50px;
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 1em;
+                box-shadow: 0 4px 10px rgba(99, 102, 241, 0.4);
+              "
+            >
+              Lock In Choice! 🔐
+            </button>
+          </form>
+          <div
+            id="explain11"
+            style="
+              display: none;
+              margin-top: 15px;
+              padding: 15px;
+              border-radius: 16px;
+            "
+          ></div>
+        </div>
+
+        <div
+          style="
+            background: rgba(15, 23, 42, 0.6);
+            border: 3px solid #6366f1;
+            padding: 25px;
+            border-radius: 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          "
+          id="block12"
+        >
+          <h3
+            style="
+              margin-top: 0;
+              color: #fff;
+              font-size: 1.3em;
+              display: flex;
+              align-items: flex-start;
+              gap: 10px;
+            "
+          >
+            <span>🔮</span
+            ><span
+              >12. Which attribute of the &lt;font&gt; tag modifies the
+              typographic style family name?</span
+            >
+          </h3>
+          <form id="q12Form">
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q12"
+                value="A"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 a) face</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q12"
+                value="B"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 b) style</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q12"
+                value="C"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 c) design</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q12"
+                value="D"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 d) type</label
+            >
+            <button
+              type="button"
+              onclick="
+                submitSingleAnswer(
+                  12,
+                  'A',
+                  'The FACE attribute defines the structural font style typeface (e.g., Arial, Calibri, Jokerman).',
+                )
+              "
+              id="btn12"
+              style="
+                margin-top: 15px;
+                background: #6366f1;
+                color: white;
+                border: none;
+                padding: 10px 24px;
+                border-radius: 50px;
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 1em;
+                box-shadow: 0 4px 10px rgba(99, 102, 241, 0.4);
+              "
+            >
+              Lock In Choice! 🔐
+            </button>
+          </form>
+          <div
+            id="explain12"
+            style="
+              display: none;
+              margin-top: 15px;
+              padding: 15px;
+              border-radius: 16px;
+            "
+          ></div>
+        </div>
+
+        <div
+          style="
+            background: rgba(15, 23, 42, 0.6);
+            border: 3px solid #6366f1;
+            padding: 25px;
+            border-radius: 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          "
+          id="block13"
+        >
+          <h3
+            style="
+              margin-top: 0;
+              color: #fff;
+              font-size: 1.3em;
+              display: flex;
+              align-items: flex-start;
+              gap: 10px;
+            "
+          >
+            <span>🔮</span
+            ><span
+              >13. What size scale value range is accepted by the &lt;font&gt;
+              tag size attribute?</span
+            >
+          </h3>
+          <form id="q13Form">
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q13"
+                value="A"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 a) 1 to 10</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q13"
+                value="B"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 b) 1 to 7</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q13"
+                value="C"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 c) 10px to 100px</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q13"
+                value="D"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 d) 0 to 5</label
+            >
+            <button
+              type="button"
+              onclick="
+                submitSingleAnswer(
+                  13,
+                  'B',
+                  'The font size attribute takes integer values strictly from 1 to 7, where 1 is the smallest, 7 is the largest, and 3 is default.',
+                )
+              "
+              id="btn13"
+              style="
+                margin-top: 15px;
+                background: #6366f1;
+                color: white;
+                border: none;
+                padding: 10px 24px;
+                border-radius: 50px;
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 1em;
+                box-shadow: 0 4px 10px rgba(99, 102, 241, 0.4);
+              "
+            >
+              Lock In Choice! 🔐
+            </button>
+          </form>
+          <div
+            id="explain13"
+            style="
+              display: none;
+              margin-top: 15px;
+              padding: 15px;
+              border-radius: 16px;
+            "
+          ></div>
+        </div>
+
+        <div
+          style="
+            background: rgba(15, 23, 42, 0.6);
+            border: 3px solid #6366f1;
+            padding: 25px;
+            border-radius: 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          "
+          id="block14"
+        >
+          <h3
+            style="
+              margin-top: 0;
+              color: #fff;
+              font-size: 1.3em;
+              display: flex;
+              align-items: flex-start;
+              gap: 10px;
+            "
+          >
+            <span>🔮</span
+            ><span
+              >14. Which attribute of the &lt;body&gt; tag shifts the structural
+              empty layout space at the top margin?</span
+            >
+          </h3>
+          <form id="q14Form">
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q14"
+                value="A"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 a) TOPMARGIN</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q14"
+                value="B"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 b) PADDINGTOP</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q14"
+                value="C"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 c) ALIGNTOP</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q14"
+                value="D"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 d) MARGINTOP</label
+            >
+            <button
+              type="button"
+              onclick="
+                submitSingleAnswer(
+                  14,
+                  'A',
+                  'The TOPMARGIN attribute changes the top margin spacing boundaries of the webpage.',
+                )
+              "
+              id="btn14"
+              style="
+                margin-top: 15px;
+                background: #6366f1;
+                color: white;
+                border: none;
+                padding: 10px 24px;
+                border-radius: 50px;
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 1em;
+                box-shadow: 0 4px 10px rgba(99, 102, 241, 0.4);
+              "
+            >
+              Lock In Choice! 🔐
+            </button>
+          </form>
+          <div
+            id="explain14"
+            style="
+              display: none;
+              margin-top: 15px;
+              padding: 15px;
+              border-radius: 16px;
+            "
+          ></div>
+        </div>
+
+        <div
+          style="
+            background: rgba(15, 23, 42, 0.6);
+            border: 3px solid #6366f1;
+            padding: 25px;
+            border-radius: 24px;
+            margin-bottom: 35px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          "
+          id="block15"
+        >
+          <h3
+            style="
+              margin-top: 0;
+              color: #fff;
+              font-size: 1.3em;
+              display: flex;
+              align-items: flex-start;
+              gap: 10px;
+            "
+          >
+            <span>🔮</span
+            ><span
+              >15. What value inside the &lt;UL&gt; type attribute switches
+              bullet shapes into solid squares?</span
+            >
+          </h3>
+          <form id="q15Form">
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q15"
+                value="A"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 a) Circle</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q15"
+                value="B"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 b) Disc</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q15"
+                value="C"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 c) Square</label
+            >
+            <label
+              style="
+                display: block;
+                margin: 12px 0;
+                cursor: pointer;
+                font-size: 1.1em;
+                background: rgba(255, 255, 255, 0.05);
+                padding: 12px 20px;
+                border-radius: 50px;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+              "
+              ><input
+                type="radio"
+                name="q15"
+                value="D"
+                style="transform: scale(1.3); margin-right: 12px"
+              />
+              🌟 d) Box</label
+            >
+            <button
+              type="button"
+              onclick="
+                submitSingleAnswer(
+                  15,
+                  'C',
+                  'Possible formatting values for the &lt;UL&gt; type attribute are disc, circle, and square. Choosing square gives filled-in square bullets.',
+                )
+              "
+              id="btn15"
+              style="
+                margin-top: 15px;
+                background: #6366f1;
+                color: white;
+                border: none;
+                padding: 10px 24px;
+                border-radius: 50px;
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 1em;
+                box-shadow: 0 4px 10px rgba(99, 102, 241, 0.4);
+              "
+            >
+              Lock In Choice! 🔐
+            </button>
+          </form>
+          <div
+            id="explain15"
+            style="
+              display: none;
+              margin-top: 15px;
+              padding: 15px;
+              border-radius: 16px;
+            "
+          ></div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px; margin-bottom: 20px">
+          <button
+            type="button"
+            id="finalSubmitBtn"
+            onclick="calculateFinalScore()"
+            style="
+              background: linear-gradient(to right, #00f2fe, #4ade80);
+              color: #1e1b4b;
+              border: 4px solid #fff;
+              padding: 18px 45px;
+              border-radius: 50px;
+              font-size: 1.4em;
+              font-weight: bold;
+              cursor: pointer;
+              box-shadow: 0 10px 25px rgba(0, 242, 254, 0.4);
+            "
+          >
+            🛸 Broadcast Mission Score to Base!
+          </button>
+        </div>
+
+        <div
+          id="resultScoreboard"
+          style="
+            display: none;
+            margin-top: 40px;
+            padding: 35px;
+            border-radius: 24px;
+            text-align: center;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+          "
+        ></div>
+      </div>
+    </div>
+
+    <script>
+      let scoreCounter = 0;
+      let answeredQuestionsCount = 0;
+      const totalQuestions = 15;
+
+      function startQuiz() {
+        const nameInput = document.getElementById("userName").value.trim();
+        if (nameInput === "") {
+          alert("👨‍🚀 Captain! Please enter your name to ignite the rockets!");
+          return;
+        }
+
+        document.getElementById("registrationBlock").style.display = "none";
+        document.getElementById("displayName").innerText = nameInput;
+
+        document.getElementById("liveScoreHUD").style.display = "block";
+        document.getElementById("quizContainer").style.display = "block";
+      }
+
+      function submitSingleAnswer(qNum, correctValue, explanationText) {
+        const form = document.getElementById("q" + qNum + "Form");
+        const selectedOption = form.elements["q" + qNum].value;
+        const targetButton = document.getElementById("btn" + qNum);
+        const explanationDiv = document.getElementById("explain" + qNum);
+
+        if (!selectedOption) {
+          alert("🪐 Pick an orbit trail choice before locking systems!");
+          return;
+        }
+
+        let isCorrect = selectedOption === correctValue;
+
+        answeredQuestionsCount++;
+        if (isCorrect) {
+          scoreCounter++;
+        }
+
+        // Realtime Dashboard Updates
+        document.getElementById("hudAnswered").innerText =
+          answeredQuestionsCount;
+        document.getElementById("hudScore").innerText = scoreCounter + " ⭐️";
+
+        const completePercentage = Math.round(
+          (answeredQuestionsCount / totalQuestions) * 100,
+        );
+        document.getElementById("hudProgressBar").style.width =
+          completePercentage + "%";
+
+        explanationDiv.style.display = "block";
+        if (isCorrect) {
+          explanationDiv.style.background =
+            "linear-gradient(to right, #064e3b, #022c22)";
+          explanationDiv.style.color = "#a7f3d0";
+          explanationDiv.style.border = "3px solid #10b981";
+          explanationDiv.innerHTML =
+            "<strong>🎉 SUPER SONIC! CORRECT!</strong><br>🚀 " +
+            explanationText;
+        } else {
+          explanationDiv.style.background =
+            "linear-gradient(to right, #7f1d1d, #450a0a)";
+          explanationDiv.style.color = "#fca5a5";
+          explanationDiv.style.border = "3px solid #ef4444";
+          explanationDiv.innerHTML =
+            "<strong>👾 Space Asteroid Hit! Incorrect.</strong><br>The magic key was <b>(" +
+            correctValue +
+            ")</b>.<br>💡 " +
+            explanationText;
+        }
+
+        // Freeze choices
+        const radioOptions = form.elements["q" + qNum];
+        for (let i = 0; i < radioOptions.length; i++) {
+          radioOptions[i].disabled = true;
+          // Add creative highlight to checked item border matching correctness
+          if (radioOptions[i].checked) {
+            radioOptions[i].parentElement.style.borderColor = isCorrect
+              ? "#10b981"
+              : "#ef4444";
+            radioOptions[i].parentElement.style.background = isCorrect
+              ? "rgba(16,185,129,0.1)"
+              : "rgba(239,68,68,0.1)";
+          }
+        }
+
+        targetButton.disabled = true;
+        targetButton.style.background = "#475569";
+        targetButton.style.color = "#94a3b8";
+        targetButton.style.cursor = "not-allowed";
+        targetButton.style.boxShadow = "none";
+        targetButton.innerText = "Locked 🔒";
+      }
+
+      function calculateFinalScore() {
+        if (answeredQuestionsCount < totalQuestions) {
+          const confirmSubmit = confirm(
+            "🛸 Some stars are still left unmapped! Submitting now stops your progress. Proceed?",
+          );
+          if (!confirmSubmit) return;
+        }
+
+        const finalBtn = document.getElementById("finalSubmitBtn");
+        finalBtn.disabled = true;
+        finalBtn.style.background = "#475569";
+        finalBtn.style.cursor = "not-allowed";
+        finalBtn.innerText = "Transmitting Data...";
+
+        const scoreboard = document.getElementById("resultScoreboard");
+        const finalPercentage = Math.round(
+          (scoreCounter / totalQuestions) * 100,
+        );
+        const candidateName = document.getElementById("userName").value.trim();
+
+        scoreboard.style.display = "block";
+
+        // Build the kid-friendly UI theme for the final block card
+        if (finalPercentage >= 70) {
+          scoreboard.style.background =
+            "linear-gradient(135deg, #065f46 0%, #064e3b 100%)";
+          scoreboard.style.color = "#fff";
+          scoreboard.style.border = "5px solid #34d399";
+          scoreboard.innerHTML = `
+                    <h2 style="font-size: 2.2em; color: #fef08a; margin-top: 0; text-shadow: 0 0 10px rgba(254,240,138,0.5);">🏆 Cosmic Grandmaster! 🏆</h2>
+                    <p style="font-size: 1.3em;">Amazing code skills, Cadet <strong>${candidateName}</strong>!</p>
+                    <p style="font-size: 2.2em; font-weight: bold; margin: 15px 0; color: #34d399;">Final Score: ${scoreCounter} / ${totalQuestions} (${finalPercentage}%)</p>
+                    <p id="networkStatusMsg" style="font-size: 1.1em; color: #cbd5e1; font-style: italic;">🛸 Beaming data to alien headquarters... Please hold tightly...</p>
+                `;
+        } else {
+          scoreboard.style.background =
+            "linear-gradient(135deg, #7c2d12 0%, #431407 100%)";
+          scoreboard.style.color = "#fff";
+          scoreboard.style.border = "5px solid #fb923c";
+          scoreboard.innerHTML = `
+                    <h2 style="font-size: 2.2em; color: #fef08a; margin-top: 0;">🛰️ Mission Complete! 🛰️</h2>
+                    <p style="font-size: 1.3em;">Good flight, Explorer <strong>${candidateName}</strong>. Ready for another run next time?</p>
+                    <p style="font-size: 2.2em; font-weight: bold; margin: 15px 0; color: #fb923c;">Final Score: ${scoreCounter} / ${totalQuestions} (${finalPercentage}%)</p>
+                    <p id="networkStatusMsg" style="font-size: 1.1em; color: #cbd5e1; font-style: italic;">🛸 Beaming data to alien headquarters... Please hold tightly...</p>
+                `;
+        }
+
+        scoreboard.scrollIntoView({ behavior: "smooth" });
+
+        // Prepare AJAX data wrapper payload to match Formspree expectations
+        let payload = {
+          "Student Code-Name": candidateName,
+          "Final Score Recorded": scoreCounter + " out of " + totalQuestions,
+          "Success Percentage": finalPercentage + "%",
+        };
+
+        // ASYNC AJAX TRANSMISSION BACKEND ENGINE
+        fetch("https://formspree.io/f/xwvjbrjl", {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        })
+          .then((response) => {
+            const networkStatus = document.getElementById("networkStatusMsg");
+            if (response.ok) {
+              networkStatus.innerHTML =
+                "👽 <b>Transmission Secured!</b> Head Base acknowledged your final mission record successfully!";
+              networkStatus.style.color = "#4ade80";
+            } else {
+              response.json().then((data) => {
+                if (Object.prototype.hasOwnProperty.call(data, "errors")) {
+                  networkStatus.innerHTML =
+                    "👾 Warning! Data transmission failed: " +
+                    data.errors.map((error) => error.message).join(", ");
+                } else {
+                  networkStatus.innerHTML =
+                    "👾 Server anomaly encountered during broadcasting.";
+                }
+                networkStatus.style.color = "#f87171";
+              });
+            }
+          })
+          .catch((error) => {
+            const networkStatus = document.getElementById("networkStatusMsg");
+            networkStatus.innerHTML =
+              "👾 Cosmic solar flare blocked background wireless telemetry signal. Check network connection!";
+            networkStatus.style.color = "#f87171";
+          });
+      }
+    </script>
+  </body>
+</html>
